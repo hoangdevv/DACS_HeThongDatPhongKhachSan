@@ -1,0 +1,314 @@
+:root {
+    --primaryColor: hsl(199, 100%, 33%);
+    --secondaryColor: hsl(187, 85%, 43%);
+    --gradientColor: linear-gradient(to right, hsl(187, 85%, 43%), hsl(199, 100%, 33%));
+    --whiteColor: hsl(0, 0%, 100%);
+    --blackColor: hsl(201, 33%, 16%);
+    --textColor: hsl(240, 4%, 36%);
+    --whiteColorDeam: hsl(0, 0%, 93%);
+    --greyText: rgb(190, 190, 190);
+    --inputColor: rgb(239, 239, 239);
+    --bodyColor: rgb(240, 240, 246);
+    --cardBG: rgb(225, 225, 235);
+}
+
+.home-page {
+    width: 100%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+
+    video {
+        position: absolute;
+        height: 100%;
+        width: 100%;
+        top: 0;
+        bottom: 0;
+        object-fit: cover;
+    }
+
+    .homeContent {
+        width: 100%;
+        height: max-content;
+        padding: 8rem 1.5rem 3rem;
+        display: flex;
+        row-gap: 3rem;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        margin: auto;
+        color: var(--whiteColor);
+        z-index: 100;
+
+        .textDiv {
+            padding: 2rem 0;
+
+            .smallText {
+                font-size: 13px;
+                text-transform: uppercase;
+            }
+
+            .homeTitle {
+                position: relative;
+                font-size: 1.8rem;
+            }
+        }
+
+        .cardDiv {
+            position: relative;
+            padding: 2rem 1.5rem;
+            /* Tăng padding để làm rộng form */
+            background: var(--whiteColor);
+            border-radius: 10px;
+            display: flex;
+            flex-direction: column;
+            gap: 1.5rem;
+            /* Tăng khoảng cách giữa các phần tử */
+            width: 100%;
+            /* Đảm bảo form chiếm hết không gian */
+
+            label {
+                display: block;
+                color: var(--textColor);
+                padding-bottom: 10px;
+                font-size: 13px;
+                font-weight: 500;
+            }
+
+            .destinationInput {
+                .input {
+                    width: 100%;
+                    height: 48px;
+                    padding: 0 1rem;
+                    background: var(--inputColor);
+                    border-radius: 3rem;
+                    display: flex;
+                    align-items: center;
+                    position: relative;
+
+                    input {
+                        background: none;
+                        border: none;
+                        outline: none;
+                        width: 100%;
+                        font-size: 14px;
+                        font-weight: 500;
+                        padding-left: 10px;
+
+                        &::placeholder {
+                            font-size: 13px;
+                        }
+                    }
+
+                    .locationIcon {
+                        width: 24px;
+                        height: 24px;
+                        background-image: url('https://d1785e74lyxkqq.cloudfront.net/_next/static/v2/7/7f57d24fd3db681418a3694bd71cb93b.svg');
+                        background-size: cover;
+                        background-position: center;
+                        background-repeat: no-repeat;
+                        margin-left: 10px;
+                    }
+                }
+            }
+
+            .dateInputs {
+                display: flex;
+                justify-content: space-between;
+                gap: 1rem;
+
+                .dateInput {
+                    flex: 1;
+
+                    .input {
+                        width: 100%;
+                        height: 48px;
+                        padding: 0 1rem;
+                        background: var(--inputColor);
+                        border-radius: 3rem;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+
+                        input {
+                            background: none;
+                            border: none;
+                            outline: none;
+                            width: 100%;
+                            font-size: 14px;
+                            font-weight: 500;
+                            padding-left: 10px;
+
+                            &::placeholder {
+                                font-size: 13px;
+                            }
+                        }
+                    }
+                }
+            }
+
+            .guestRoomInputs {
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                gap: 1rem;
+
+                .guestRoomInput {
+                    flex: 1;
+                    position: relative;
+
+                    label {
+                        display: block;
+                        color: var(--textColor);
+                        padding-bottom: 10px;
+                        font-size: 13px;
+                        font-weight: 500;
+                    }
+
+                    .input {
+                        width: 80%;
+                        height: 48px;
+                        padding: 0 1rem;
+                        background: var(--inputColor);
+                        border-radius: 3rem;
+                        display: flex;
+                        align-items: center;
+                        position: relative;
+
+                        input {
+                            background: none;
+                            border: none;
+                            outline: none;
+                            width: 100%;
+                            font-size: 14px;
+                            font-weight: 500;
+                            padding-left: 10px;
+
+                            &::placeholder {
+                                font-size: 13px;
+                            }
+                        }
+
+                        .dropdownContent {
+                            display: none;
+                            position: absolute;
+                            top: 100%;
+                            left: 0;
+                            right: 0;
+                            background: var(--whiteColor);
+                            padding: 0.5rem;
+                            border: 1px solid #ccc;
+                            border-radius: 4px;
+                            box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                            z-index: 10;
+
+                            label {
+                                font-size: 12px;
+                                padding: 5px 0;
+                            }
+
+                            input {
+                                width: 60px; // Độ rộng của input
+                                font-size: 12px;
+                                margin-right: 5px;
+                            }
+
+                            
+                        }
+
+                        &:hover .dropdownContent {
+                            display: block;
+                        }
+
+                        .dropdownContent .dropdownContent-item{
+                            display: flex;
+                            align-items: center;
+                            justify-content: space-between;
+                        }
+                    }
+                }
+
+                .searchButton {
+                    background-color: var(--primaryColor);
+                    color: var(--whiteColor);
+                    font-size: 16px;
+                    border: none;
+                    padding: 14px 30px;
+                    border-radius: 3rem;
+                    cursor: pointer;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    gap: 5px;
+
+                    .icon {
+                        font-size: 20px;
+                    }
+
+                    &:hover {
+                        background-color: var(--secondaryColor);
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 500px) {
+    .home-page {
+        .homeContent {
+            .textDiv {
+                .smallText {
+                    font-size: 16px;
+                }
+
+                .homeTitle {
+                    position: relative;
+                    font-size: 2.3rem;
+                    width: max-content;
+
+                    &::after {
+                        position: absolute;
+                        content: '';
+                        background: var(--secondaryColor);
+                        height: 5px;
+                        width: 145px;
+                        right: 0px;
+                        bottom: 5px;
+                        z-index: -1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 660px) {
+    .home-page {
+        .homeContent {
+            .cardDiv {
+                padding: 2rem 1.5rem;
+                /* Tăng padding để làm rộng form */
+            }
+        }
+    }
+}
+
+@media screen and (min-width: 940px) {
+    .home-page {
+        height: 85vh;
+    }
+}
+
+@media screen and (min-width: 1240px) {
+    .home-page {
+        height: 95vh;
+
+        .homeContent {
+            padding-left: 0;
+            padding-right: 0;
+        }
+    }
+}
