@@ -1,0 +1,11 @@
+Manifest-Version: 1.0
+Implementation-Title: he_thong_dat_phong_khach_san
+Implementation-Version: 1.0
+Built-By: PC
+Implementation-Vendor-Id: com.laptrinhjavaweb
+Build-Jdk: 1.8.0_191
+Implementation-URL: https://projects.spring.io/spring-boot/he_thong_da
+ t_phong_khach_san/
+Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
+
